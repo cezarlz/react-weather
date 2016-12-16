@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>React Weather App - EBANX</title>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app">
+    <main class="main" style="background-color: #E7B073">
+      <header class="main__header">
+        <div class="main__city-info">
+          <img src="//cdn.apixu.com/weather/64x64/day/122.png" alt="" class="main__city-temp-icon">
+
+          <div>
+            <h1 class="main__city-name">Maringá</h1>
+            <p class="main__city-status">Clear</dpiv>
+          </div>
+        </div>
+
+        <h2 class="main__city-temperature">30º</h2>
+      </header>
+
+      <section class="forecast">
+        <div class="forecast__item">
+          <header class="forecast__header">
+            <img src="//cdn.apixu.com/weather/64x64/day/122.png" alt="" class="forecast__icon">
+
+            <h3 class="forecast__day">Today</h3>
+          </header>
+
+          <ul class="forecast__list">
+            <li class="forecast__status">
+              <span class="forecast__label">Minimum</span>
+              <h4 class="forecast__status-value">19º</h4>
+            </li>
+            <li class="forecast__status">
+              <span class="forecast__label">Minimum</span>
+              <h4 class="forecast__status-value">19º</h4>
+            </li>
+            <li class="forecast__status">
+              <span class="forecast__label">Minimum</span>
+              <h4 class="forecast__status-value">19º</h4>
+            </li>
+            <li class="forecast__status">
+              <span class="forecast__label">Minimum</span>
+              <h4 class="forecast__status-value">19º</h4>
+            </li>
+            <li class="forecast__status">
+              <span class="forecast__label">Minimum</span>
+              <h4 class="forecast__status-value">19º</h4>
+            </li>
+            <li class="forecast__status">
+              <span class="forecast__label">Minimum</span>
+              <h4 class="forecast__status-value">19º</h4>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <aside class="sidebar">
+      <ul class="cities">
+        <li class="city city--active cities__item" style="background-color: #4569C2">
+          <p class="city__name city__name--native cit">Curitiba</p>
+          <h3 class="city__temperature">12º</h3>
+        </li>
+        <li class="city cities__item" style="background-color: #4569C2">
+          <p class="city__name">Curitiba</p>
+          <h3 class="city__temperature">12º</h3>
+        </li>
+        <li class="city cities__item" style="background-color: #4569C2">
+          <p class="city__name">Curitiba</p>
+          <h3 class="city__temperature">12º</h3>
+        </li>
+      </ul>
+
+      <form action="" class="add-city cities__add-city">
+        <input type="text" name="city" class="add-city__name" required="required" placeholder="City name" />
+      </form>
+
+      <button class="btn cities__add-btn" type="button">+</button>
+
+      <div class="cities__change-temperature">
+        <button class="btn cities__change-temperature-btn cities__change-temperature-btn--active">Cº</button> / <button class="btn cities__change-temperature-btn">Fº</button>
+      </div>
+    </aside>
+  </div>
+</body>
+</html>
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">

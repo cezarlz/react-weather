@@ -1,0 +1,273 @@
+:root {
+  --sidebar-color: #212121;
+  --font: 'Open Sans', sans-serif;
+  --font-color: #fff;
+  --font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-size: var(--font-size);
+  font-family: var(--font);
+  color: var(--font-color);
+}
+
+#app {
+  display: flex;
+  align-items: stretch;
+  min-height: 100vh;
+  max-height: 100vh;
+}
+
+/* Main */
+.main {
+  flex: 3;
+  padding: 50px;
+  overflow-y: auto;
+}
+
+  .main__header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+  }
+
+    .main__city-info {
+      display: flex;
+      align-items: center;
+    }
+
+    .main__city-temp-icon {
+      margin-right: 15px;
+    }
+
+    .main__city-name {
+      margin: 0;
+
+      font-weight: 100;
+      font-size: 60px;
+    }
+
+    .main__city-temperature {
+      margin: 0;
+
+      font-weight: 100;
+      font-size: 120px;
+    }
+
+    .main__city-status {
+      margin: 0;
+
+      font-weight: 600;
+    }
+
+
+/* Sidebar */
+.sidebar {
+  flex: 1.5;
+  min-width: 300px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow-y: auto;
+
+  background-color: var(--sidebar-color);
+}
+
+  .cities {
+    position: relative;
+    z-index: 10;
+
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+  }
+
+    .cities__item:last-of-type {
+      box-shadow: 0 10px 15px rgba(0,0,0,.2);
+    }
+
+
+  .city {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    cursor: pointer;
+
+    transition: all .4s;
+    will-change: opacity;
+  }
+
+    .city:hover,
+    .city--active {
+      opacity: .9;
+    }
+
+    .city__name {
+      margin: 0;
+
+      font-size: 30px;
+      font-weight: 100;
+      letter-spacing: -1px;
+    }
+
+    .city__name--native::after {
+      display: inline-block;
+      content: '➢';
+      margin-left: 15px;
+
+      transform: rotate(-40deg);
+    }
+
+    .city__temperature {
+      margin: 0;
+
+      font-size: 60px;
+      font-weight: 100;
+      letter-spacing: -1px;
+    }
+
+  .add-city {
+    padding: 40px;
+    margin-top: -142px;
+
+    background-color: #fff;
+    transition: all .4s;
+    will-change: margin-top;
+    opacity: 0;
+  }
+
+    .add-city--is-active {
+      margin-top: 0;
+
+      opacity: 1;
+    }
+
+    .add-city__name {
+      padding: 20px;
+      width: 100%;
+
+      font-size: var(--font-size);
+      font-family: var(--font);
+    }
+
+.btn {
+  display: block;
+  width: 100%;
+
+  text-align: center;
+  color: #fff;
+  font-size: 60px;
+  font-weight: 100;
+
+  background: none;
+  border: 0;
+  opacity: .5;
+  transition: all .4s;
+  will-change: opacity;
+  cursor: pointer;
+  outline: 0;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+  .cities__add-btn {
+    margin-bottom: 120px;
+  }
+
+  .cities__change-temperature {
+    margin-top: auto;
+    margin-bottom: 30px;
+
+    font-size: 22px;
+    text-align: center;
+  }
+
+    .cities__change-temperature-btn {
+      display: inline-block;
+      width: auto;
+
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .cities__change-temperature-btn--active {
+      opacity: 1;
+    }
+
+
+.forecast {
+
+}
+
+  .forecast__item {
+    margin-bottom: 60px;
+  }
+
+  .forecast__item:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .forecast__header {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 5px;
+  }
+
+  .forecast__icon {
+    margin-right: 15px;
+  }
+
+  .forecast__day {
+    margin: 0;
+
+    font-weight: 100;
+    font-size: 32px;
+  }
+
+  .forecast__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    list-style-type: none;
+  }
+
+  .forecast__status {
+    margin-right: 40px;
+    margin-bottom: 15px;
+  }
+
+  .forecast__status:last-of-type { margin-right: 0; }
+
+  .forecast__label {
+    display: block;
+
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .forecast__status-value {
+    margin: 0;
+
+    font-weight: 600;
+    font-size: 24px;
+  }
